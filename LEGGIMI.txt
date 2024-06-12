@@ -1,0 +1,21 @@
+BUILD DELL'IMMAGINE (ultima versione)
+docker build -t userbotleggipath:latest .
+
+CREAZIONE DEL CONTAINER con un nome specifico, dove creiamo una copia di un path fantasma che è lo specchio del contenuto della
+cartella prova \Apache2\htdocs\prova  nel mio locale  (inserire il nome del path dove si inserisce prova)
+
+docker run -it --name containerApp1 -v C:\Apache2\htdocs\prova:/app/prova userbotleggipath:latest
+
+Quando chiede 
+Inserisci il path del file: 
+
+inserire  il volume   
+/app/prova/provaApp.txt
+
+--------------------------------------------------------------------------------------------------------------
+
+In alternativa è possibile farlo girare su locale con i comandi 
+
+npx ts-node src/index.ts                   per eseguire l'applicativo
+
+npx jest                             per eseguire gli unit test
